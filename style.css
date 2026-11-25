@@ -1,0 +1,685 @@
+
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+:root {
+    --primary: #102b50;
+    --secondary: #1d4ed8;
+    --accent: #f0b429;
+    --background: #f5f7fb;
+    --white: #ffffff;
+    --text: #263449;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --radius: 12px;
+    --shadow: 0 5px 20px rgba(15, 35, 65, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   2. HEADER
+========================= */
+
+.header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 22px 7%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    background: var(--accent);
+    color: var(--primary);
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #4ade80;
+}
+
+
+/* =========================
+   3. NAVIGATION
+========================= */
+
+.navbar {
+    background: #183b67;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 7%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--white);
+    padding: 17px 0;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+
+/* =========================
+   4. HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(120deg, #102b50, #2563a6);
+    color: var(--white);
+    padding: 95px 7%;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero-label,
+.section-label {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #dbeafe;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: #ffd166;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+
+/* =========================
+   5. GENERAL SECTIONS
+========================= */
+
+.section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 7%;
+}
+
+.alternate-bg {
+    max-width: 100%;
+    background: #edf2f8;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.contact-content h2 {
+    color: var(--primary);
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================
+   6. DASHBOARD CARDS
+========================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 23px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    min-width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.purple {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.stat-card span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   7. COURSE CARDS
+========================= */
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(15, 35, 65, 0.12);
+}
+
+.course-banner {
+    height: 145px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.html-banner {
+    background: linear-gradient(135deg, #e44d26, #f06529);
+}
+
+.css-banner {
+    background: linear-gradient(135deg, #1572b6, #33a9dc);
+}
+
+.js-banner {
+    background: linear-gradient(135deg, #b58b00, #eacb32);
+}
+
+.python-banner {
+    background: linear-gradient(135deg, #306998, #ffd43b);
+}
+
+.course-content {
+    padding: 22px;
+}
+
+.course-category {
+    font-size: 10px;
+    color: var(--secondary);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.course-content h3 {
+    margin: 8px 0;
+    color: var(--primary);
+}
+
+.course-content p {
+    font-size: 13px;
+    color: var(--muted);
+    min-height: 62px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0 8px;
+    font-size: 12px;
+}
+
+.progress-bar {
+    height: 7px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 20px;
+    background: var(--secondary);
+}
+
+.html-progress { width: 90%; }
+.css-progress { width: 80%; }
+.js-progress { width: 60%; }
+.python-progress { width: 45%; }
+
+
+/* =========================
+   8. RESULTS TABLE
+========================= */
+
+.table-container {
+    background: var(--white);
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 550px;
+}
+
+th, td {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--primary);
+    color: var(--white);
+    font-size: 13px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.badge-pass {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+tfoot td {
+    background: #f1f5f9;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* =========================
+   9. ANNOUNCEMENTS
+========================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.news-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.news-date {
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.news-card h3 {
+    color: var(--primary);
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.news-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.news-card a {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.news-card a:hover {
+    color: var(--primary);
+}
+
+
+/* =========================
+   10. CONTACT
+========================= */
+
+.contact-section {
+    background: var(--white);
+    max-width: 100%;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-content p {
+    color: var(--muted);
+    margin: 15px 0 25px;
+}
+
+.location {
+    font-size: 13px;
+}
+
+
+/* =========================
+   11. FOOTER
+========================= */
+
+.footer {
+    background: #0b1e36;
+    color: var(--white);
+    padding: 45px 7% 20px;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-content h2 {
+    font-size: 19px;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: 35px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   12. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+    .dashboard-grid,
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 0 20px;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 50px 7%;
+    }
+
+    .dashboard-grid,
+    .courses-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .footer-content,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================
+   13. ACCESSIBILITY
+========================= */
+
+a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
